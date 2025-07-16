@@ -28,8 +28,8 @@ transform = transforms.Compose([
 ])
 
 # === データセット準備 ===
-train_ds = datasets.Flowers102(root=ROOT_DIR, split="train", download=True, transform=transform)
-val_ds   = datasets.Flowers102(root=ROOT_DIR, split="val",   download=True, transform=transform)
+train_ds = datasets.Flowers102(root=ROOT_DIR, split="train", download=False, transform=transform)
+val_ds   = datasets.Flowers102(root=ROOT_DIR, split="val",   download=False, transform=transform)
 class_names = train_ds.classes
 NUM_CLASSES = len(class_names)
 
